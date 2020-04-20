@@ -1,3 +1,6 @@
+body{
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/pointer_1583.png"), auto;
+}
 #hills{
   display: flex;
   flex-flow: row wrap;
@@ -6,6 +9,7 @@
   width: 90vw;
   background-image: url('https://i.pinimg.com/originals/8c/59/47/8c5947aca39131735798134c323ba1d4.jpg');
   background-size: contain;
+ 
 }
 #title{
   display: flex;
