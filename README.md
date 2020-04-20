@@ -6,7 +6,6 @@
 
 ## **Description**
 
-_This program is designed to calculate a user age in different parts of the solar system and see their life expectancy in those planets, as well as teach the user a  it about life in the solar system ._
 
 ## **Behavior Driven Development**
 

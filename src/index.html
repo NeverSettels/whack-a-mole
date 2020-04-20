@@ -10,57 +10,24 @@
 </head>
 
 <body class='container'>
-  <h1>Solar Age</h1>
-  <div class='form-cont'>
-    <form id="age-form">
-      <div>
-        <label for="age">Enter your age</label>
-        <input type="number" id='age'>
-      </div>
-      <div>
-        <label for="country">Select country of Origin</label>
-        <select id="country">
-          <option value="usa">U.S.A</option>
-          <option value='mexico'>Mexico</option>
-          <option value='canada'>Canada</option>
-        </select>
-      </div>
-
-      <button type="submit">Enter</button>
-
-    </form>
-    <h2 id='click-on-planet' class='no-display'>Click on a planet</h2>
-    <div class="planets no-display">
-      <div class='planet' id='mercury'><img src="https://nineplanets.org/wp-content/uploads/2019/09/mercury.png"
-          alt="Mercury">
-      </div>
-
-      <div class='planet' id='mars'><img
-          src="https://i.pinimg.com/originals/40/25/d8/4025d8936c88b454a95b857beac7eaec.png" alt="Mars">
-      </div>
-
-      <div class='planet' id='venus'>
-        <img
-          src="https://vignette.wikia.nocookie.net/thesolarsystem6361/images/6/6e/Venus_surface_spacepedia.png/revision/latest/scale-to-width-down/340?cb=20180322151813"
-          alt="Venus">
-
-      </div>
-
-      <div class='planet' id='jupiter'>
-        <img src="https://i2.wp.com/freepngimages.com/wp-content/uploads/2016/04/planet-jupiter-1.png?fit=800%2C800"
-          alt="Jupiter">
-
-      </div>
-    </div>
-    <div id='info' class="info no-display">
-      <img id='img' src="">
-      <h3 id='title'>Mercury</h3>
-      <p id='fact'></p>
-      <p><strong>Your Age on this planet:</strong> <span id="age-span"></span></p>
-      <p><strong>Your Countries avereage life span on this planet:</strong> <span id="expectancy-span"></span></p>
-      <p id='left-to-live'></p>
-      <a id="back">Back</a>
-    </div>
+  <div id='title'>
+    <h1>Whack a Mole</h1>
+    <div>timer: <span id='time'>60</span></div>
+    <div id="score-board">Score:<span id="score">0</span></div>
+    <button id="start">Start</button>
+  </div>
+  <div id='hills'>
+    <div id='mole-1' class="hill"><img src="https://cdn.mathisexterminating.com/uploads/2019/12/pest-mole.png"
+        alt="mole"></div>
+    <div id='mole-2' class="hill"></div>
+    <div id='mole-3' class="hill"></div>
+    <div id='mole-4' class="hill"></div>
+    <div id='mole-5' class="hill"></div>
+    <div id='mole-6' class="hill"></div>
+    <div id='mole-7' class="hill"></div>
+    <div id='mole-8' class="hill"></div>
+    <div id='mole-9' class="hill"></div>
+  </div>
 
 </body>
 
