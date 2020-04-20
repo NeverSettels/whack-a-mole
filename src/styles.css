@@ -14,15 +14,22 @@
   align-items: center;
 }
 .hill{
-  width: 30%;
-  height: 30%;
+  width: 25%;
+  margin: 1rem 1rem;
+  height: 25%;
   background-image: url('https://i.ya-webdesign.com/images/wood-bullet-hole-png-5.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 0;
+ 
 }
 .hill img{
- height: 100%
+ height: 80%;
+ cursor: url("https://gamepedia.cursecdn.com/autonauts_gamepedia_en/d/d7/Wooden_Mallet.png"), auto;
+}
+.timer{
+  font-size: 34px;
+  font-weight: bolder;
 }
 .red{
   color: red;
