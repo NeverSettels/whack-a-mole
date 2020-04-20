@@ -12,6 +12,7 @@ let startGameTimer = () => {
       timer = 30;
       clearInterval(timerFunction);
       $("#time").text("Times Up!")
+      $(".hill").off("click")
     } else {
       $("#time").text(timer)
       timer--
@@ -21,25 +22,30 @@ let startGameTimer = () => {
     }
   }, 1000);
 }
-let checkNum = (number, toCheck) => {
-  if (toCheck === number) {
-    console.log("equal! ", toCheck)
-    let temp = Math.floor(Math.random() * (9) + 1)
-    checkNum(number, temp)
-  } else {
-    console.log("not equal! ", toCheck)
-    return toCheck;
-  }
+// let checkNum = (number, toCheck) => {
+//   if (toCheck === number) {
+//     console.log("equal! ", toCheck)
+//     let temp = Math.floor(Math.random() * (9) + 1)
+//     checkNum(number, temp)
+//   } else {
+//     console.log("not equal! ", toCheck)
+//     return toCheck;
+//   }
+// }
+let clickableListener = () => {
+  const whack = new Audio('https://freesound.org/data/previews/125/125266_2219481-lq.mp3')
+
+  $(".hill").on('click', '.clickable', () => {
+    whack.play()
+    console.log('whack')
+  })
 }
 
 let addMole = () => {
-  let moleNumber = 1;
   let molePicker = setInterval(() => {
     let randNumb = Math.floor(Math.random() * (9) + 1)
-    //moleNumber = checkNum(moleNumber, randNumb)
-    console.log(randNumb)
     $(".hill").empty();
-    $(`#mole-${randNumb}`).html(`<img src="https://cdn.mathisexterminating.com/uploads/2019/12/pest-mole.png"
+    $(`#mole-${randNumb}`).html(`<img class="clickable" src="https://cdn.mathisexterminating.com/uploads/2019/12/pest-mole.png"
     alt="mole">`);
   }, 1000);
   setTimeout(() => {
@@ -47,10 +53,11 @@ let addMole = () => {
   }, 30000);
 }
 $(document).ready(() => {
-  const whack = new Audio('https://freesound.org/data/previews/125/125266_2219481-lq.mp3')
+
   $("#start").click(() => {
     startGameTimer();
     addMole()
+    clickableListener();
   })
 
 }); 
