@@ -32,12 +32,13 @@ let startGameTimer = () => {
 //     return toCheck;
 //   }
 // }
-let clickableListener = () => {
+let clickableListener = (game) => {
   const whack = new Audio('https://freesound.org/data/previews/125/125266_2219481-lq.mp3')
 
   $(".hill").on('click', '.clickable', () => {
     whack.play()
-    console.log('whack')
+    game.score++
+    $('#score').text(game.score)
   })
 }
 
@@ -54,10 +55,12 @@ let addMole = () => {
 }
 $(document).ready(() => {
 
+
   $("#start").click(() => {
+    let game = { score: 0 }
     startGameTimer();
     addMole()
-    clickableListener();
+    clickableListener(game);
   })
 
 }); 
