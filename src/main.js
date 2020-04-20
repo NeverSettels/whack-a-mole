@@ -43,6 +43,11 @@ let clickableListener = (game) => {
 }
 
 let addMole = () => {
+  const music = new Audio('https://freesound.org/data/previews/369/369920_2402876-lq.mp3')
+  const victory = new Audio('https://freesound.org/data/previews/470/470083_3248005-lq.mp3')
+  music.play();
+  victory.pause()
+  music.loop = true
   let molePicker = setInterval(() => {
     let randNumb = Math.floor(Math.random() * (9) + 1)
     $(".hill").empty();
@@ -50,8 +55,10 @@ let addMole = () => {
     alt="mole">`);
   }, 1000);
   setTimeout(() => {
+    music.pause()
+    victory.play()
     clearInterval(molePicker)
-  }, 30000);
+  }, 31000);
 }
 $(document).ready(() => {
 

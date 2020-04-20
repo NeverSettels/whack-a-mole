@@ -1,6 +1,4 @@
-body{
-  cursor: url("https://cdn.custom-cursor.com/db/pointer/pointer_1583.png"), auto;
-}
+
 #hills{
   display: flex;
   flex-flow: row wrap;
@@ -9,7 +7,7 @@ body{
   width: 90vw;
   background-image: url('https://i.pinimg.com/originals/8c/59/47/8c5947aca39131735798134c323ba1d4.jpg');
   background-size: contain;
- 
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/pointer_1583.png"), auto;
 }
 #title{
   display: flex;
@@ -29,7 +27,7 @@ body{
 }
 .hill img{
  height: 80%;
- cursor: url("https://cdn.custom-cursor.com/db/cursor/pointer_3450.png"), auto;
+ cursor: url("https://cdn.custom-cursor.com/db/cursor/pointer_3450.png"), auto; 
 }
 .timer{
   font-size: 34px;
