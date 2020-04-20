@@ -41,12 +41,11 @@ let clickableListener = (game) => {
     $('#score').text(game.score)
   })
 }
-
 let addMole = () => {
   const music = new Audio('https://freesound.org/data/previews/369/369920_2402876-lq.mp3')
   const victory = new Audio('https://freesound.org/data/previews/470/470083_3248005-lq.mp3')
   music.play();
-  victory.pause()
+  victory.pause();
   music.loop = true
   let molePicker = setInterval(() => {
     let randNumb = Math.floor(Math.random() * (9) + 1)
@@ -61,8 +60,6 @@ let addMole = () => {
   }, 31000);
 }
 $(document).ready(() => {
-
-
   $("#start").click(() => {
     let game = { score: 0 }
     startGameTimer();
