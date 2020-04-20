@@ -33,7 +33,7 @@ let startGameTimer = () => {
 //   }
 // }
 let clickableListener = (game) => {
-  const whack = new Audio('https://freesound.org/data/previews/125/125266_2219481-lq.mp3')
+  const whack = new Audio('https://freesound.org/data/previews/436/436163_1992856-lq.mp3')
 
   $(".hill").on('click', '.clickable', () => {
     whack.play()
