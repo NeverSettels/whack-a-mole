@@ -34,13 +34,11 @@ let checkNum = (number, toCheck) => {
 
 let addMole = () => {
   let moleNumber = 1;
-  function molePicker() {
-    setInterval(async function () {
-      let randNumb = Math.floor(Math.random() * (9) + 1)
-      moleNumber = await checkNum(moleNumber, randNumb)
-      console.log(moleNumber)
-    }, 4000);
-  }
+  let molePicker = setInterval(() => {
+    let randNumb = Math.floor(Math.random() * (9) + 1)
+    //moleNumber = checkNum(moleNumber, randNumb)
+    console.log(randNumb)
+  }, 500);
   setTimeout(() => {
     clearInterval(molePicker)
   }, 30000);
