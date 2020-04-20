@@ -38,7 +38,10 @@ let addMole = () => {
     let randNumb = Math.floor(Math.random() * (9) + 1)
     //moleNumber = checkNum(moleNumber, randNumb)
     console.log(randNumb)
-  }, 500);
+    $(".hill").empty();
+    $(`#mole-${randNumb}`).html(`<img src="https://cdn.mathisexterminating.com/uploads/2019/12/pest-mole.png"
+    alt="mole">`);
+  }, 1000);
   setTimeout(() => {
     clearInterval(molePicker)
   }, 30000);
